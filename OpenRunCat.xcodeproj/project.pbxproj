@@ -32,9 +32,13 @@
 		1A1A1A1A1A1A1A0000002A /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A0000002A /* ThemeManager.swift */; };
 		/* Utilities files */
 		1A1A1A1A1A1A1A0000002B /* NSImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A0000002B /* NSImageExtensions.swift */; };
+		/* Settings files */
+		1A1A1A1A1A1A1A0000002C /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A0000002C /* SettingsManager.swift */; };
+		1A1A1A1A1A1A1A0000002D /* LaunchAtLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A0000002D /* LaunchAtLoginManager.swift */; };
 		/* Test files */
 		2B2B2B2B2B2B2B2B00000001 /* SystemMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2B2B2B2B2B2B2B00000001 /* SystemMonitorTests.swift */; };
 		2B2B2B2B2B2B2B2B00000002 /* RunnerManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2B2B2B2B2B2B2B00000002 /* RunnerManagerTests.swift */; };
+		2B2B2B2B2B2B2B2B00000003 /* SettingsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2B2B2B2B2B2B2B00000003 /* SettingsManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,10 +79,14 @@
 			1A1A1A1A1A1A1A0000002A /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 			/* Utilities files */
 			1A1A1A1A1A1A1A0000002B /* NSImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageExtensions.swift; sourceTree = "<group>"; };
+		/* Settings files */
+		1A1A1A1A1A1A1A0000002C /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		1A1A1A1A1A1A1A0000002D /* LaunchAtLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginManager.swift; sourceTree = "<group>"; };
 		2B2B2B2B2B2B2B2B00000010 /* OpenRunCatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenRunCatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		/* Test files */
 		2B2B2B2B2B2B2B2B00000001 /* SystemMonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMonitorTests.swift; sourceTree = "<group>"; };
 		2B2B2B2B2B2B2B2B00000002 /* RunnerManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerManagerTests.swift; sourceTree = "<group>"; };
+		2B2B2B2B2B2B2B2B00000003 /* SettingsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +198,8 @@
 		1A1A1A1A1A1A1A1A00000038 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				1A1A1A1A1A1A1A0000002C /* SettingsManager.swift */,
+				1A1A1A1A1A1A1A0000002D /* LaunchAtLoginManager.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -256,6 +266,7 @@ children = (
 		2B2B2B2B2B2B2B2B00000073 /* SettingsTests */ = {
 			isa = PBXGroup;
 			children = (
+				2B2B2B2B2B2B2B2B00000003 /* SettingsManagerTests.swift */,
 			);
 			path = SettingsTests;
 			sourceTree = "<group>";
@@ -383,6 +394,9 @@ children = (
 				1A1A1A1A1A1A1A0000002A /* ThemeManager.swift in Sources */,
 				/* Utilities files */
 				1A1A1A1A1A1A1A0000002B /* NSImageExtensions.swift in Sources */,
+				/* Settings files */
+				1A1A1A1A1A1A1A0000002C /* SettingsManager.swift in Sources */,
+				1A1A1A1A1A1A1A0000002D /* LaunchAtLoginManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +406,7 @@ children = (
 			files = (
 				2B2B2B2B2B2B2B2B00000001 /* SystemMonitorTests.swift in Sources */,
 				2B2B2B2B2B2B2B2B00000002 /* RunnerManagerTests.swift in Sources */,
+				2B2B2B2B2B2B2B2B00000003 /* SettingsManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
