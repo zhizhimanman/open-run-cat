@@ -13,14 +13,14 @@ class SettingsManagerTests: XCTestCase {
     }
 
     func testDefaultSettings() {
-        XCTAssertEqual(manager.settings.selectedRunner, "Cat")
+        XCTAssertEqual(manager.settings.selectedRunner, "builtin-Cat")
         XCTAssertEqual(manager.settings.speedSource, .cpu)
         XCTAssertEqual(manager.settings.theme, .system)
     }
 
     func testUpdateRunner() {
-        manager.updateRunner("Dog")
-        XCTAssertEqual(manager.settings.selectedRunner, "Dog")
+        manager.updateRunner("builtin-Dog")
+        XCTAssertEqual(manager.settings.selectedRunner, "builtin-Dog")
     }
 
     func testUpdateSpeedSource() {
@@ -29,7 +29,7 @@ class SettingsManagerTests: XCTestCase {
     }
 
     func testSettingsPersistence() {
-        manager.updateRunner("ClaudeCrab")
+        manager.updateRunner("builtin-ClaudeCrab")
         manager.updateTheme(.dark)
 
         // Force save
@@ -37,7 +37,7 @@ class SettingsManagerTests: XCTestCase {
 
         // Create new instance to verify persistence
         let newManager = SettingsManager()
-        XCTAssertEqual(newManager.settings.selectedRunner, "ClaudeCrab")
+        XCTAssertEqual(newManager.settings.selectedRunner, "builtin-ClaudeCrab")
         XCTAssertEqual(newManager.settings.theme, .dark)
     }
 }
