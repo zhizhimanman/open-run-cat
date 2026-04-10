@@ -42,6 +42,7 @@ class ThemeManager: ObservableObject {
     }
 
     func tintedImage(_ image: NSImage) -> NSImage {
-        return IconTinting.tintedIcon(image, forTheme: currentTheme)
+        // 保持原图颜色，不进行着色（赛博朋克风格需要彩色）
+        return image
     }
 }
