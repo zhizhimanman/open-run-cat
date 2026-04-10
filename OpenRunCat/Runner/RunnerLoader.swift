@@ -7,11 +7,20 @@ class RunnerLoader {
     func loadAllRunners() -> [Runner] {
         var runners: [Runner] = []
 
-        // 加载内置角色
-        let builtinRunners = ["ClaudeCrab-SideRun", "ClaudeCrab-ClawWave", "ClaudeCrab-BounceHop", "Cat"]
-        for name in builtinRunners {
-            if let runner = loadBuiltinRunner(name: name) {
-                runners.append(runner)
+        // 加载内置角色 - 自动扫描 Runners 目录
+        if let resourcePath = Bundle.main.resourcePath {
+            let runnersPath = URL(fileURLWithPath: resourcePath).appendingPathComponent("Runners")
+
+            if let enumerator = FileManager.default.enumerator(at: runnersPath, includingPropertiesForKeys: [.isDirectoryKey], options: [.skipsHiddenFiles]) {
+                for case let folderURL as URL in enumerator {
+                    let resourceValues = try? folderURL.resourceValues(forKeys: [.isDirectoryKey])
+                    guard let isDirectory = resourceValues?.isDirectory, isDirectory else { continue }
+
+                    let runner = loadRunnerFromFolder(folderURL, isBuiltIn: true)
+                    if let runner = runner {
+                        runners.append(runner)
+                    }
+                }
             }
         }
 
@@ -19,44 +28,10 @@ class RunnerLoader {
         let customRunners = loadCustomRunners()
         runners.append(contentsOf: customRunners)
 
+        // 按名称排序
+        runners.sort { $0.name < $1.name }
+
         return runners
-    }
-
-    private func loadBuiltinRunner(name: String) -> Runner? {
-        guard let resourcePath = Bundle.main.resourcePath else { return nil }
-
-        // 查找 Runners/{name} 目录下的 frame_XX.png 文件
-        let runnerPath = URL(fileURLWithPath: resourcePath).appendingPathComponent("Runners").appendingPathComponent(name)
-
-        guard FileManager.default.fileExists(atPath: runnerPath.path) else {
-            // 如果 Runners 目录不存在，尝试从根目录加载（兼容旧版本）
-            return loadBuiltinRunnerFromRoot(name: name)
-        }
-
-        let framePaths = loadFramePaths(from: runnerPath)
-        guard !framePaths.isEmpty else { return nil }
-
-        return Runner(
-            id: "builtin-\(name)",
-            name: name,
-            framePaths: framePaths,
-            isBuiltIn: true
-        )
-    }
-
-    private func loadBuiltinRunnerFromRoot(name: String) -> Runner? {
-        guard let resourcePath = Bundle.main.resourcePath else { return nil }
-        let resourceURL = URL(fileURLWithPath: resourcePath)
-
-        let framePaths = loadFramePaths(from: resourceURL)
-        guard !framePaths.isEmpty else { return nil }
-
-        return Runner(
-            id: "builtin-\(name)",
-            name: name,
-            framePaths: framePaths,
-            isBuiltIn: true
-        )
     }
 
     private func loadCustomRunners() -> [Runner] {

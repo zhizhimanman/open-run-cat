@@ -3,7 +3,7 @@
 import Foundation
 
 struct Settings: Codable {
-    var selectedRunner: String = "builtin-ClaudeCrab-SideRun"
+    var selectedRunner: String = "builtin-CyberCrab-NeonPink"
     var speedSource: SpeedSource = .cpu
     var theme: AppTheme = .system
     var fpsLimit: FPSLimit = .none
