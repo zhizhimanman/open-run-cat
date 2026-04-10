@@ -16,6 +16,13 @@
 		1A1A1A1A1A1A1A1A00000007 /* FPSLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A00000018 /* FPSLimit.swift */; };
 		1A1A1A1A1A1A1A1A00000008 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A00000019 /* Settings.swift */; };
 		1A1A1A1A1A1A1A1A00000009 /* Runner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A0000001A /* Runner.swift */; };
+		/* Cat runner frames */
+		1A1A1A1A1A1A1A1A000000A1 /* frame_00.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A000000B1 /* frame_00.png */; };
+		1A1A1A1A1A1A1A1A000000A2 /* frame_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A000000B2 /* frame_01.png */; };
+		1A1A1A1A1A1A1A1A000000A3 /* frame_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A000000B3 /* frame_02.png */; };
+		1A1A1A1A1A1A1A1A000000A4 /* frame_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A000000B4 /* frame_03.png */; };
+		1A1A1A1A1A1A1A1A000000A5 /* frame_04.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A000000B5 /* frame_04.png */; };
+
 		/* Monitor files */
 		1A1A1A1A1A1A1A1A00000020 /* CPUMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A00000020 /* CPUMonitor.swift */; };
 		1A1A1A1A1A1A1A1A00000021 /* MemoryMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A00000021 /* MemoryMonitor.swift */; };
@@ -101,6 +108,13 @@
 		2B2B2B2B2B2B2B2B00000001 /* SystemMonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMonitorTests.swift; sourceTree = "<group>"; };
 		2B2B2B2B2B2B2B2B00000002 /* RunnerManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerManagerTests.swift; sourceTree = "<group>"; };
 		2B2B2B2B2B2B2B2B00000003 /* SettingsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManagerTests.swift; sourceTree = "<group>"; };
+	/* Cat runner frame files */
+	1A1A1A1A1A1A1A1A000000B1 /* frame_00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_00.png; sourceTree = "<group>"; };
+	1A1A1A1A1A1A1A1A000000B2 /* frame_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_01.png; sourceTree = "<group>"; };
+	1A1A1A1A1A1A1A1A000000B3 /* frame_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_02.png; sourceTree = "<group>"; };
+	1A1A1A1A1A1A1A1A000000B4 /* frame_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_03.png; sourceTree = "<group>"; };
+	1A1A1A1A1A1A1A1A000000B5 /* frame_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_04.png; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,8 +265,37 @@
 		1A1A1A1A1A1A1A1A0000003C /* Runners */ = {
 			isa = PBXGroup;
 			children = (
+				1A1A1A1A1A1A1A1A0000003D /* Cat */,
+				1A1A1A1A1A1A1A1A0000003E /* Dog */,
+				1A1A1A1A1A1A1A1A0000003F /* ClaudeCrab */,
 			);
 			path = Runners;
+			sourceTree = "<group>";
+		};
+		1A1A1A1A1A1A1A1A0000003D /* Cat */ = {
+			isa = PBXGroup;
+			children = (
+				1A1A1A1A1A1A1A1A000000B1 /* frame_00.png */,
+				1A1A1A1A1A1A1A1A000000B2 /* frame_01.png */,
+				1A1A1A1A1A1A1A1A000000B3 /* frame_02.png */,
+				1A1A1A1A1A1A1A1A000000B4 /* frame_03.png */,
+				1A1A1A1A1A1A1A1A000000B5 /* frame_04.png */,
+			);
+			path = Cat;
+			sourceTree = "<group>";
+		};
+		1A1A1A1A1A1A1A1A0000003E /* Dog */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dog;
+			sourceTree = "<group>";
+		};
+		1A1A1A1A1A1A1A1A0000003F /* ClaudeCrab */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ClaudeCrab;
 			sourceTree = "<group>";
 		};
 		2B2B2B2B2B2B2B2B00000070 /* OpenRunCatTests */ = {
@@ -371,6 +414,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A1A1A1A1A1A1A1A00000002 /* Assets.xcassets in Resources */,
+				1A1A1A1A1A1A1A1A000000A1 /* frame_00.png in Resources */,
+				1A1A1A1A1A1A1A1A000000A2 /* frame_01.png in Resources */,
+				1A1A1A1A1A1A1A1A000000A3 /* frame_02.png in Resources */,
+				1A1A1A1A1A1A1A1A000000A4 /* frame_03.png in Resources */,
+				1A1A1A1A1A1A1A1A000000A5 /* frame_04.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
