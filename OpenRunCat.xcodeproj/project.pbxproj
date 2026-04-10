@@ -35,41 +35,12 @@
 		A00000000000000000000026 /* ContextMenuBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000026 /* ContextMenuBuilder.swift */; };
 		A00000000000000000000027 /* MenuBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000027 /* MenuBarManager.swift */; };
 		A00000000000000000000030 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000030 /* Assets.xcassets */; };
-		A00000000000000000000031 /* frame_00.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000041 /* frame_00.png */; };
-		A00000000000000000000032 /* frame_01.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000042 /* frame_01.png */; };
-		A00000000000000000000033 /* frame_02.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000043 /* frame_02.png */; };
-		A00000000000000000000034 /* frame_03.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000044 /* frame_03.png */; };
-		A00000000000000000000035 /* frame_04.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000045 /* frame_04.png */; };
+		A00000000000000000000036 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000051 /* en.lproj */; };
+		A00000000000000000000037 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000052 /* zh-Hans.lproj */; };
+		A00000000000000000000060 /* Runners in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000060 /* Runners */; };
 		C00000000000000000000001 /* SystemMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00000000000000000000001 /* SystemMonitorTests.swift */; };
 		C00000000000000000000002 /* RunnerManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00000000000000000000002 /* RunnerManagerTests.swift */; };
 		C00000000000000000000003 /* SettingsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00000000000000000000003 /* SettingsManagerTests.swift */; };
-			A00000000000000000000036 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000051 /* en.lproj */; };
-			A00000000000000000000037 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000052 /* zh-Hans.lproj */; };
-
-			A00000000000000000000061 /* frame_00.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000061 /* frame_00.png */; };
-			A00000000000000000000062 /* frame_01.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000062 /* frame_01.png */; };
-			A00000000000000000000063 /* frame_02.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000063 /* frame_02.png */; };
-			A00000000000000000000064 /* frame_03.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000064 /* frame_03.png */; };
-			A00000000000000000000065 /* frame_04.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000065 /* frame_04.png */; };
-			A00000000000000000000066 /* frame_05.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000066 /* frame_05.png */; };
-			A00000000000000000000067 /* frame_06.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000067 /* frame_06.png */; };
-			A00000000000000000000068 /* frame_07.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000068 /* frame_07.png */; };
-			A00000000000000000000071 /* frame_00.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000071 /* frame_00.png */; };
-			A00000000000000000000072 /* frame_01.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000072 /* frame_01.png */; };
-			A00000000000000000000073 /* frame_02.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000073 /* frame_02.png */; };
-			A00000000000000000000074 /* frame_03.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000074 /* frame_03.png */; };
-			A00000000000000000000075 /* frame_04.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000075 /* frame_04.png */; };
-			A00000000000000000000076 /* frame_05.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000076 /* frame_05.png */; };
-			A00000000000000000000077 /* frame_06.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000077 /* frame_06.png */; };
-			A00000000000000000000078 /* frame_07.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000078 /* frame_07.png */; };
-			A00000000000000000000081 /* frame_00.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000081 /* frame_00.png */; };
-			A00000000000000000000082 /* frame_01.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000082 /* frame_01.png */; };
-			A00000000000000000000083 /* frame_02.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000083 /* frame_02.png */; };
-			A00000000000000000000084 /* frame_03.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000084 /* frame_03.png */; };
-			A00000000000000000000085 /* frame_04.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000085 /* frame_04.png */; };
-			A00000000000000000000086 /* frame_05.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000086 /* frame_05.png */; };
-			A00000000000000000000087 /* frame_06.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000087 /* frame_06.png */; };
-			A00000000000000000000088 /* frame_07.png in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000088 /* frame_07.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,42 +85,13 @@
 		B00000000000000000000028 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B00000000000000000000029 /* entitlements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = entitlements.plist; sourceTree = "<group>"; };
 		B00000000000000000000030 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B00000000000000000000041 /* frame_00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_00.png; sourceTree = "<group>"; };
-		B00000000000000000000042 /* frame_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_01.png; sourceTree = "<group>"; };
-		B00000000000000000000043 /* frame_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_02.png; sourceTree = "<group>"; };
-		B00000000000000000000044 /* frame_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_03.png; sourceTree = "<group>"; };
-		B00000000000000000000045 /* frame_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_04.png; sourceTree = "<group>"; };
+		B00000000000000000000051 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "en.lproj"; sourceTree = "<group>"; };
+		B00000000000000000000052 /* zh-Hans.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "zh-Hans.lproj"; sourceTree = "<group>"; };
+		B00000000000000000000060 /* Runners */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Runners; sourceTree = "<group>"; };
 		D00000000000000000000001 /* SystemMonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMonitorTests.swift; sourceTree = "<group>"; };
 		D00000000000000000000002 /* RunnerManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerManagerTests.swift; sourceTree = "<group>"; };
 		D00000000000000000000003 /* SettingsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManagerTests.swift; sourceTree = "<group>"; };
 		F00000000000000000000011 /* OpenRunCatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenRunCatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-			B00000000000000000000051 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "en.lproj"; sourceTree = "<group>"; };
-			B00000000000000000000052 /* zh-Hans.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "zh-Hans.lproj"; sourceTree = "<group>"; };
-	
-			B00000000000000000000061 /* frame_00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_00.png; sourceTree = "<group>"; };
-			B00000000000000000000062 /* frame_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_01.png; sourceTree = "<group>"; };
-			B00000000000000000000063 /* frame_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_02.png; sourceTree = "<group>"; };
-			B00000000000000000000064 /* frame_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_03.png; sourceTree = "<group>"; };
-			B00000000000000000000065 /* frame_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_04.png; sourceTree = "<group>"; };
-			B00000000000000000000066 /* frame_05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_05.png; sourceTree = "<group>"; };
-			B00000000000000000000067 /* frame_06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_06.png; sourceTree = "<group>"; };
-			B00000000000000000000068 /* frame_07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_07.png; sourceTree = "<group>"; };
-			B00000000000000000000071 /* frame_00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_00.png; sourceTree = "<group>"; };
-			B00000000000000000000072 /* frame_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_01.png; sourceTree = "<group>"; };
-			B00000000000000000000073 /* frame_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_02.png; sourceTree = "<group>"; };
-			B00000000000000000000074 /* frame_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_03.png; sourceTree = "<group>"; };
-			B00000000000000000000075 /* frame_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_04.png; sourceTree = "<group>"; };
-			B00000000000000000000076 /* frame_05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_05.png; sourceTree = "<group>"; };
-			B00000000000000000000077 /* frame_06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_06.png; sourceTree = "<group>"; };
-			B00000000000000000000078 /* frame_07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_07.png; sourceTree = "<group>"; };
-			B00000000000000000000081 /* frame_00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_00.png; sourceTree = "<group>"; };
-			B00000000000000000000082 /* frame_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_01.png; sourceTree = "<group>"; };
-			B00000000000000000000083 /* frame_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_02.png; sourceTree = "<group>"; };
-			B00000000000000000000084 /* frame_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_03.png; sourceTree = "<group>"; };
-			B00000000000000000000085 /* frame_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_04.png; sourceTree = "<group>"; };
-			B00000000000000000000086 /* frame_05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_05.png; sourceTree = "<group>"; };
-			B00000000000000000000087 /* frame_06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_06.png; sourceTree = "<group>"; };
-			B00000000000000000000088 /* frame_07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_07.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,80 +235,12 @@
 			isa = PBXGroup;
 			children = (
 				B00000000000000000000030 /* Assets.xcassets */,
-				G00000000000000000000010 /* Runners */,
+				B00000000000000000000060 /* Runners */,
 				G00000000000000000000012 /* Localization */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		G00000000000000000000010 /* Runners */ = {
-			isa = PBXGroup;
-			children = (
-				G00000000000000000000011 /* Cat */,
-				G00000000000000000000013 /* ClaudeCrab-SideRun */,
-				G00000000000000000000014 /* ClaudeCrab-ClawWave */,
-				G00000000000000000000015 /* ClaudeCrab-BounceHop */,
-			);
-			path = Runners;
-			sourceTree = "<group>";
-		};
-		G00000000000000000000011 /* Cat */ = {
-			isa = PBXGroup;
-			children = (
-				B00000000000000000000041 /* frame_00.png */,
-				B00000000000000000000042 /* frame_01.png */,
-				B00000000000000000000043 /* frame_02.png */,
-				B00000000000000000000044 /* frame_03.png */,
-				B00000000000000000000045 /* frame_04.png */,
-			);
-			path = Cat;
-			sourceTree = "<group>";
-		};		G00000000000000000000013 /* ClaudeCrab-SideRun */ = {
-			isa = PBXGroup;
-			children = (
-				B00000000000000000000061 /* frame_00.png */,
-				B00000000000000000000062 /* frame_01.png */,
-				B00000000000000000000063 /* frame_02.png */,
-				B00000000000000000000064 /* frame_03.png */,
-				B00000000000000000000065 /* frame_04.png */,
-				B00000000000000000000066 /* frame_05.png */,
-				B00000000000000000000067 /* frame_06.png */,
-				B00000000000000000000068 /* frame_07.png */,
-			);
-			path = ClaudeCrab-SideRun;
-			sourceTree = "<group>";
-		};
-		G00000000000000000000014 /* ClaudeCrab-ClawWave */ = {
-			isa = PBXGroup;
-			children = (
-				B00000000000000000000071 /* frame_00.png */,
-				B00000000000000000000072 /* frame_01.png */,
-				B00000000000000000000073 /* frame_02.png */,
-				B00000000000000000000074 /* frame_03.png */,
-				B00000000000000000000075 /* frame_04.png */,
-				B00000000000000000000076 /* frame_05.png */,
-				B00000000000000000000077 /* frame_06.png */,
-				B00000000000000000000078 /* frame_07.png */,
-			);
-			path = ClaudeCrab-ClawWave;
-			sourceTree = "<group>";
-		};
-		G00000000000000000000015 /* ClaudeCrab-BounceHop */ = {
-			isa = PBXGroup;
-			children = (
-				B00000000000000000000081 /* frame_00.png */,
-				B00000000000000000000082 /* frame_01.png */,
-				B00000000000000000000083 /* frame_02.png */,
-				B00000000000000000000084 /* frame_03.png */,
-				B00000000000000000000085 /* frame_04.png */,
-				B00000000000000000000086 /* frame_05.png */,
-				B00000000000000000000087 /* frame_06.png */,
-				B00000000000000000000088 /* frame_07.png */,
-			);
-			path = ClaudeCrab-BounceHop;
-			sourceTree = "<group>";
-		};
-
 		G00000000000000000000012 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -493,37 +367,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A00000000000000000000030 /* Assets.xcassets in Resources */,
-				A00000000000000000000031 /* frame_00.png in Resources */,
-				A00000000000000000000032 /* frame_01.png in Resources */,
-				A00000000000000000000033 /* frame_02.png in Resources */,
-				A00000000000000000000034 /* frame_03.png in Resources */,
-				A00000000000000000000035 /* frame_04.png in Resources */,
+				A00000000000000000000060 /* Runners in Resources */,
 				A00000000000000000000036 /* en.lproj in Resources */,
 				A00000000000000000000037 /* zh-Hans.lproj in Resources */,
-				A00000000000000000000061 /* frame_00.png in Resources */,
-				A00000000000000000000062 /* frame_01.png in Resources */,
-				A00000000000000000000063 /* frame_02.png in Resources */,
-				A00000000000000000000064 /* frame_03.png in Resources */,
-				A00000000000000000000065 /* frame_04.png in Resources */,
-				A00000000000000000000066 /* frame_05.png in Resources */,
-				A00000000000000000000067 /* frame_06.png in Resources */,
-				A00000000000000000000068 /* frame_07.png in Resources */,
-				A00000000000000000000071 /* frame_00.png in Resources */,
-				A00000000000000000000072 /* frame_01.png in Resources */,
-				A00000000000000000000073 /* frame_02.png in Resources */,
-				A00000000000000000000074 /* frame_03.png in Resources */,
-				A00000000000000000000075 /* frame_04.png in Resources */,
-				A00000000000000000000076 /* frame_05.png in Resources */,
-				A00000000000000000000077 /* frame_06.png in Resources */,
-				A00000000000000000000078 /* frame_07.png in Resources */,
-				A00000000000000000000081 /* frame_00.png in Resources */,
-				A00000000000000000000082 /* frame_01.png in Resources */,
-				A00000000000000000000083 /* frame_02.png in Resources */,
-				A00000000000000000000084 /* frame_03.png in Resources */,
-				A00000000000000000000085 /* frame_04.png in Resources */,
-				A00000000000000000000086 /* frame_05.png in Resources */,
-				A00000000000000000000087 /* frame_06.png in Resources */,
-				A00000000000000000000088 /* frame_07.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
