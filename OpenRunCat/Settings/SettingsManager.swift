@@ -10,11 +10,11 @@ class SettingsManager: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
 
     init() {
-        settings = loadSettings()
+        settings = Self.loadSettings(key: key)
         setupAutoSave()
     }
 
-    private func loadSettings() -> Settings {
+    private static func loadSettings(key: String) -> Settings {
         guard let data = UserDefaults.standard.data(forKey: key),
               let decoded = try? JSONDecoder().decode(Settings.self, from: data) else {
             return Settings.default
