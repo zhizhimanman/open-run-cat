@@ -11,14 +11,12 @@ class ThemeManager: ObservableObject {
         observeSystemTheme()
     }
 
-    func setTheme(_ theme: AppTheme) {
-        currentTheme = theme
-        applyTheme()
+    deinit {
+        DistributedNotificationCenter.default().removeObserver(self)
     }
 
-    private func applyTheme() {
-        // Trigger UI update, components observe currentTheme
-        objectWillChange.send()
+    func setTheme(_ theme: AppTheme) {
+        currentTheme = theme
     }
 
     private func observeSystemTheme() {
@@ -33,7 +31,9 @@ class ThemeManager: ObservableObject {
 
     @objc private func systemThemeChanged() {
         if currentTheme == .system {
-            applyTheme()
+            DispatchQueue.main.async { [weak self] in
+                self?.objectWillChange.send()
+            }
         }
     }
 
