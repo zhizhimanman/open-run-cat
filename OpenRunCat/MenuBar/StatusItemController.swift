@@ -12,7 +12,10 @@ class StatusItemController {
     func updateIcon(_ image: NSImage) {
         DispatchQueue.main.async {
             let resizedImage = image.resized(to: NSSize(width: Constants.iconSize, height: Constants.iconSize))
+            resizedImage.isTemplate = false
             self.statusItem?.button?.image = resizedImage
+            self.statusItem?.button?.imagePosition = .imageOnly
+            self.statusItem?.button?.imageScaling = .scaleProportionallyDown
         }
     }
 
