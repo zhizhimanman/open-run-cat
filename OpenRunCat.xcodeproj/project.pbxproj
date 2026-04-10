@@ -24,7 +24,7 @@
 		1A1A1A1A1A1A1A1A000000A5 /* frame_04.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A000000B5 /* frame_04.png */; };
 
 		/* Monitor files */
-		1A1A1A1A1A1A1A1A00000020 /* CPUMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A00000020 /* CPUMonitor.swift */; };
+		1A1A1A1A1A1A1A1A00000220 /* CPUMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A00000220 /* CPUMonitor.swift */; };
 		1A1A1A1A1A1A1A1A00000021 /* MemoryMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A00000021 /* MemoryMonitor.swift */; };
 		1A1A1A1A1A1A1A1A00000022 /* DiskMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A00000022 /* DiskMonitor.swift */; };
 		1A1A1A1A1A1A1A1A00000023 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A00000023 /* NetworkMonitor.swift */; };
@@ -79,7 +79,7 @@
 		1A1A1A1A1A1A1A1A0000001A /* Runner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runner.swift; sourceTree = "<group>"; };
 		1A1A1A1A1A1A1A1A0000001B /* entitlements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = entitlements.plist; sourceTree = "<group>"; };
 		/* Monitor files */
-		1A1A1A1A1A1A1A1A00000020 /* CPUMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUMonitor.swift; sourceTree = "<group>"; };
+		1A1A1A1A1A1A1A1A00000220 /* CPUMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUMonitor.swift; sourceTree = "<group>"; };
 		1A1A1A1A1A1A1A1A00000021 /* MemoryMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryMonitor.swift; sourceTree = "<group>"; };
 		1A1A1A1A1A1A1A1A00000022 /* DiskMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskMonitor.swift; sourceTree = "<group>"; };
 		1A1A1A1A1A1A1A1A00000023 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				1A1A1A1A1A1A1A1A00000025 /* SystemMonitor.swift */,
-				1A1A1A1A1A1A1A1A00000020 /* CPUMonitor.swift */,
+				1A1A1A1A1A1A1A1A00000220 /* CPUMonitor.swift */,
 				1A1A1A1A1A1A1A1A00000021 /* MemoryMonitor.swift */,
 				1A1A1A1A1A1A1A1A00000022 /* DiskMonitor.swift */,
 				1A1A1A1A1A1A1A1A00000023 /* NetworkMonitor.swift */,
@@ -447,7 +447,7 @@
 				1A1A1A1A1A1A1A1A00000008 /* Settings.swift in Sources */,
 				1A1A1A1A1A1A1A1A00000009 /* Runner.swift in Sources */,
 				/* Monitor files */
-				1A1A1A1A1A1A1A1A00000020 /* CPUMonitor.swift in Sources */,
+				1A1A1A1A1A1A1A1A00000220 /* CPUMonitor.swift in Sources */,
 				1A1A1A1A1A1A1A1A00000021 /* MemoryMonitor.swift in Sources */,
 				1A1A1A1A1A1A1A1A00000022 /* DiskMonitor.swift in Sources */,
 				1A1A1A1A1A1A1A1A00000023 /* NetworkMonitor.swift in Sources */,
