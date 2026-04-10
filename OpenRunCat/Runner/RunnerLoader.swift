@@ -83,7 +83,7 @@ class RunnerLoader {
 
         let pngFiles = files
             .filter { $0.pathExtension == "png" }
-            .filter { framePattern.wholeMatch(in: $0.lastPathComponent) != nil }
+            .filter { (try? framePattern.wholeMatch(in: $0.lastPathComponent)) != nil }
             .sorted { $0.lastPathComponent < $1.lastPathComponent }
 
         return pngFiles
