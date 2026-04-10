@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		1A1A1A1A1A1A1A1A00000001 /* OpenRunCatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A00000011 /* OpenRunCatApp.swift */; };
 		1A1A1A1A1A1A1A1A00000002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A00000013 /* Assets.xcassets */; };
+			1A1A1A1A1A1A1A1A00000003 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A00000014 /* Constants.swift */; };
+			1A1A1A1A1A1A1A1A00000004 /* MetricsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A00000015 /* MetricsData.swift */; };
+			1A1A1A1A1A1A1A1A00000005 /* SpeedSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A00000016 /* SpeedSource.swift */; };
+			1A1A1A1A1A1A1A1A00000006 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A00000017 /* AppTheme.swift */; };
+			1A1A1A1A1A1A1A1A00000007 /* FPSLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A00000018 /* FPSLimit.swift */; };
+			1A1A1A1A1A1A1A1A00000008 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A00000019 /* Settings.swift */; };
+			1A1A1A1A1A1A1A1A00000009 /* Runner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A0000001A /* Runner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +33,13 @@
 		1A1A1A1A1A1A1A1A00000011 /* OpenRunCatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenRunCatApp.swift; sourceTree = "<group>"; };
 		1A1A1A1A1A1A1A1A00000012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A1A1A1A1A1A1A1A00000013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A1A1A1A1A1A1A1A00000014 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1A1A1A1A1A1A1A1A00000015 /* MetricsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsData.swift; sourceTree = "<group>"; };
+		1A1A1A1A1A1A1A1A00000016 /* SpeedSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedSource.swift; sourceTree = "<group>"; };
+		1A1A1A1A1A1A1A1A00000017 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		1A1A1A1A1A1A1A1A00000018 /* FPSLimit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPSLimit.swift; sourceTree = "<group>"; };
+		1A1A1A1A1A1A1A1A00000019 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		1A1A1A1A1A1A1A1A0000001A /* Runner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runner.swift; sourceTree = "<group>"; };
 		2B2B2B2B2B2B2B2B00000010 /* OpenRunCatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenRunCatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,6 +107,12 @@
 		1A1A1A1A1A1A1A1A00000034 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1A1A1A1A1A1A1A1A00000015 /* MetricsData.swift */,
+				1A1A1A1A1A1A1A1A00000016 /* SpeedSource.swift */,
+				1A1A1A1A1A1A1A1A00000017 /* AppTheme.swift */,
+				1A1A1A1A1A1A1A1A00000018 /* FPSLimit.swift */,
+				1A1A1A1A1A1A1A1A00000019 /* Settings.swift */,
+				1A1A1A1A1A1A1A1A0000001A /* Runner.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
