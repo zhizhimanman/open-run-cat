@@ -7,9 +7,12 @@ class RunnerLoader {
     func loadAllRunners() -> [Runner] {
         var runners: [Runner] = []
 
-        // 加载内置角色 - 从 Resources 目录加载
-        if let catRunner = loadBuiltinRunner(name: "Cat") {
-            runners.append(catRunner)
+        // 加载内置角色
+        let builtinRunners = ["ClaudeCrab-SideRun", "ClaudeCrab-ClawWave", "ClaudeCrab-BounceHop", "Cat"]
+        for name in builtinRunners {
+            if let runner = loadBuiltinRunner(name: name) {
+                runners.append(runner)
+            }
         }
 
         // 加载自定义角色
@@ -21,17 +24,31 @@ class RunnerLoader {
 
     private func loadBuiltinRunner(name: String) -> Runner? {
         guard let resourcePath = Bundle.main.resourcePath else { return nil }
+
+        // 查找 Runners/{name} 目录下的 frame_XX.png 文件
+        let runnerPath = URL(fileURLWithPath: resourcePath).appendingPathComponent("Runners").appendingPathComponent(name)
+
+        guard FileManager.default.fileExists(atPath: runnerPath.path) else {
+            // 如果 Runners 目录不存在，尝试从根目录加载（兼容旧版本）
+            return loadBuiltinRunnerFromRoot(name: name)
+        }
+
+        let framePaths = loadFramePaths(from: runnerPath)
+        guard !framePaths.isEmpty else { return nil }
+
+        return Runner(
+            id: "builtin-\(name)",
+            name: name,
+            framePaths: framePaths,
+            isBuiltIn: true
+        )
+    }
+
+    private func loadBuiltinRunnerFromRoot(name: String) -> Runner? {
+        guard let resourcePath = Bundle.main.resourcePath else { return nil }
         let resourceURL = URL(fileURLWithPath: resourcePath)
 
-        // 查找 frame_XX.png 文件
-        let framePattern = /^frame_\d+\.png$/
-        guard let files = try? FileManager.default.contentsOfDirectory(at: resourceURL, includingPropertiesForKeys: nil) else { return nil }
-
-        let framePaths = files
-            .filter { $0.pathExtension == "png" }
-            .filter { (try? framePattern.wholeMatch(in: $0.lastPathComponent)) != nil }
-            .sorted { $0.lastPathComponent < $1.lastPathComponent }
-
+        let framePaths = loadFramePaths(from: resourceURL)
         guard !framePaths.isEmpty else { return nil }
 
         return Runner(
