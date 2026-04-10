@@ -32,9 +32,16 @@
 		1A1A1A1A1A1A1A0000002A /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A0000002A /* ThemeManager.swift */; };
 		/* Utilities files */
 		1A1A1A1A1A1A1A0000002B /* NSImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A0000002B /* NSImageExtensions.swift */; };
+		1A1A1A1A1A1A1A0000002E /* ByteFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A0000002E /* ByteFormatter.swift */; };
 		/* Settings files */
 		1A1A1A1A1A1A1A0000002C /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A0000002C /* SettingsManager.swift */; };
 		1A1A1A1A1A1A1A0000002D /* LaunchAtLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A0000002D /* LaunchAtLoginManager.swift */; };
+		/* MenuBar files */
+		1A1A1A1A1A1A1A00000030 /* StatusItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A00000030 /* StatusItemController.swift */; };
+		1A1A1A1A1A1A1A00000031 /* ContextMenuBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A00000031 /* ContextMenuBuilder.swift */; };
+		1A1A1A1A1A1A1A00000032 /* MenuBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A00000032 /* MenuBarManager.swift */; };
+		/* App files */
+		1A1A1A1A1A1A1A00000033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A00000033 /* AppDelegate.swift */; };
 		/* Test files */
 		2B2B2B2B2B2B2B2B00000001 /* SystemMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2B2B2B2B2B2B2B00000001 /* SystemMonitorTests.swift */; };
 		2B2B2B2B2B2B2B2B00000002 /* RunnerManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2B2B2B2B2B2B2B00000002 /* RunnerManagerTests.swift */; };
@@ -74,14 +81,21 @@
 		1A1A1A1A1A1A1A1A00000026 /* RunnerLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerLoader.swift; sourceTree = "<group>"; };
 		1A1A1A1A1A1A1A1A00000027 /* RunnerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerManager.swift; sourceTree = "<group>"; };
 		1A1A1A1A1A1A1A1A00000028 /* FrameAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameAnimator.swift; sourceTree = "<group>"; };
-			/* Theme files */
-			1A1A1A1A1A1A1A00000029 /* IconTinting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTinting.swift; sourceTree = "<group>"; };
-			1A1A1A1A1A1A1A0000002A /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
-			/* Utilities files */
-			1A1A1A1A1A1A1A0000002B /* NSImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageExtensions.swift; sourceTree = "<group>"; };
+		/* Theme files */
+		1A1A1A1A1A1A1A00000029 /* IconTinting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTinting.swift; sourceTree = "<group>"; };
+		1A1A1A1A1A1A1A0000002A /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		/* Utilities files */
+		1A1A1A1A1A1A1A0000002B /* NSImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageExtensions.swift; sourceTree = "<group>"; };
+		1A1A1A1A1A1A1A0000002E /* ByteFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByteFormatter.swift; sourceTree = "<group>"; };
 		/* Settings files */
 		1A1A1A1A1A1A1A0000002C /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		1A1A1A1A1A1A1A0000002D /* LaunchAtLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginManager.swift; sourceTree = "<group>"; };
+		/* MenuBar files */
+		1A1A1A1A1A1A1A00000030 /* StatusItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemController.swift; sourceTree = "<group>"; };
+		1A1A1A1A1A1A1A00000031 /* ContextMenuBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMenuBuilder.swift; sourceTree = "<group>"; };
+		1A1A1A1A1A1A1A00000032 /* MenuBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarManager.swift; sourceTree = "<group>"; };
+		/* App files */
+		1A1A1A1A1A1A1A00000033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B2B2B2B2B2B2B2B00000010 /* OpenRunCatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenRunCatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		/* Test files */
 		2B2B2B2B2B2B2B2B00000001 /* SystemMonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMonitorTests.swift; sourceTree = "<group>"; };
@@ -136,7 +150,6 @@
 		1A1A1A1A1A1A1A1A00000032 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-
 				1A1A1A1A1A1A1A1A00000010 /* OpenRunCat.app */,
 				2B2B2B2B2B2B2B2B00000010 /* OpenRunCatTests.xctest */,
 			);
@@ -147,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				1A1A1A1A1A1A1A1A00000011 /* OpenRunCatApp.swift */,
+				1A1A1A1A1A1A1A1A00000033 /* AppDelegate.swift */,
 				1A1A1A1A1A1A1A1A00000014 /* Constants.swift */,
 			);
 			path = App;
@@ -191,6 +205,9 @@
 		1A1A1A1A1A1A1A1A00000037 /* MenuBar */ = {
 			isa = PBXGroup;
 			children = (
+				1A1A1A1A1A1A1A00000030 /* StatusItemController.swift */,
+				1A1A1A1A1A1A1A00000031 /* ContextMenuBuilder.swift */,
+				1A1A1A1A1A1A1A00000032 /* MenuBarManager.swift */,
 			);
 			path = MenuBar;
 			sourceTree = "<group>";
@@ -206,7 +223,7 @@
 		};
 		1A1A1A1A1A1A1A1A00000039 /* Theme */ = {
 			isa = PBXGroup;
-children = (
+			children = (
 				1A1A1A1A1A1A1A00000029 /* IconTinting.swift */,
 				1A1A1A1A1A1A1A0000002A /* ThemeManager.swift */,
 			);
@@ -215,8 +232,9 @@ children = (
 		};
 		1A1A1A1A1A1A1A1A0000003A /* Utilities */ = {
 			isa = PBXGroup;
-children = (
+			children = (
 				1A1A1A1A1A1A1A0000002B /* NSImageExtensions.swift */,
+				1A1A1A1A1A1A1A0000002E /* ByteFormatter.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -394,9 +412,16 @@ children = (
 				1A1A1A1A1A1A1A0000002A /* ThemeManager.swift in Sources */,
 				/* Utilities files */
 				1A1A1A1A1A1A1A0000002B /* NSImageExtensions.swift in Sources */,
+				1A1A1A1A1A1A1A0000002E /* ByteFormatter.swift in Sources */,
 				/* Settings files */
 				1A1A1A1A1A1A1A0000002C /* SettingsManager.swift in Sources */,
 				1A1A1A1A1A1A1A0000002D /* LaunchAtLoginManager.swift in Sources */,
+				/* MenuBar files */
+				1A1A1A1A1A1A1A00000030 /* StatusItemController.swift in Sources */,
+				1A1A1A1A1A1A1A00000031 /* ContextMenuBuilder.swift in Sources */,
+				1A1A1A1A1A1A1A00000032 /* MenuBarManager.swift in Sources */,
+				/* App files */
+				1A1A1A1A1A1A1A00000033 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
