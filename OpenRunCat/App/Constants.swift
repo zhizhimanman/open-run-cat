@@ -15,5 +15,5 @@ struct Constants {
     static let customRunnersPath = "~/Library/Application Support/OpenRunCat/Runners"
 
     // UI
-    static let iconSize: CGFloat = 32.0
+    static let iconSize: CGFloat = 22.0
 }
