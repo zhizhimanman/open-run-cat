@@ -13,6 +13,10 @@ class FrameAnimator: ObservableObject {
     private var targetFPS: Double = Constants.baseFPS
     private var fpsLimit: Double? = nil
 
+    deinit {
+        stop()
+    }
+
     func setFrames(_ frames: [NSImage]) {
         self.frames = frames
         currentIndex = 0
@@ -66,6 +70,9 @@ class FrameAnimator: ObservableObject {
         guard !frames.isEmpty else { return }
 
         currentIndex = (currentIndex + 1) % frames.count
-        currentFrame = frames[currentIndex]
+        let newFrame = frames[currentIndex]
+        DispatchQueue.main.async { [weak self] in
+            self?.currentFrame = newFrame
+        }
     }
 }

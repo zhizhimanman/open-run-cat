@@ -76,9 +76,12 @@ class RunnerLoader {
     private func loadFramePaths(from folder: URL) -> [URL] {
         guard let files = try? FileManager.default.contentsOfDirectory(at: folder, includingPropertiesForKeys: nil) else { return [] }
 
+        // Pattern: frame_XX.png where XX is one or more digits
+        let framePattern = /^frame_\d+\.png$/
+
         let pngFiles = files
             .filter { $0.pathExtension == "png" }
-            .filter { $0.lastPathComponent.hasPrefix("frame_") }
+            .filter { try? framePattern.wholeMatch(in: $0.lastPathComponent) != nil }
             .sorted { $0.lastPathComponent < $1.lastPathComponent }
 
         return pngFiles

@@ -11,7 +11,6 @@ class RunnerManager: ObservableObject {
 
     private let loader = RunnerLoader()
     private let animator = FrameAnimator()
-    private var cancellables = Set<AnyCancellable>()
 
     init() {
         loadRunners()
