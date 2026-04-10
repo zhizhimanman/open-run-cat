@@ -70,7 +70,7 @@ class ContextMenuBuilder {
         runnerMenuItem.submenu = NSMenu()
 
         for runner in runners {
-            let item = NSMenuItem(title: runner.name, action: #selector(ContextMenuDelegate.selectRunner(_:)), keyEquivalent: "")
+            let item = NSMenuItem(title: runner.displayName, action: #selector(ContextMenuDelegate.selectRunner(_:)), keyEquivalent: "")
             item.representedObject = runner.id
             item.state = runner.id == selectedId ? .on : .off
             item.target = delegate

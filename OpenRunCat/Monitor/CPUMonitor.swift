@@ -5,35 +5,54 @@ import Foundation
 class CPUMonitor {
     private var previousTotal: UInt64 = 0
     private var previousIdle: UInt64 = 0
+    private var previousUser: UInt64 = 0
+    private var previousSystem: UInt64 = 0
+    private var previousNice: UInt64 = 0
 
     func getUsage() -> Double {
-        var threadList: thread_act_array_t?
-        var threadCount: mach_msg_type_number_t = 0
+        var cpuLoadInfo = host_cpu_load_info()
+        var count = mach_msg_type_number_t(MemoryLayout<host_cpu_load_info>.size / MemoryLayout<integer_t>.size)
 
-        let result = task_threads(mach_task_self_, &threadList, &threadCount)
+        let result = withUnsafeMutablePointer(to: &cpuLoadInfo) {
+            $0.withMemoryRebound(to: integer_t.self, capacity: Int(count)) {
+                host_statistics(mach_host_self(), HOST_CPU_LOAD_INFO, $0, &count)
+            }
+        }
+
         if result != KERN_SUCCESS {
             return 0.0
         }
 
-        var totalUsage: Double = 0.0
-        if let threads = threadList {
-            for i in 0..<Int(threadCount) {
-                var threadInfo = thread_basic_info()
-                var threadInfoCount = mach_msg_type_number_t(THREAD_INFO_MAX)
+        let user = UInt64(cpuLoadInfo.cpu_ticks.0)
+        let system = UInt64(cpuLoadInfo.cpu_ticks.1)
+        let idle = UInt64(cpuLoadInfo.cpu_ticks.2)
+        let nice = UInt64(cpuLoadInfo.cpu_ticks.3)
 
-                let kr = withUnsafeMutablePointer(to: &threadInfo) {
-                    $0.withMemoryRebound(to: integer_t.self, capacity: Int(threadInfoCount)) {
-                        thread_info(threads[i], thread_flavor_t(THREAD_BASIC_INFO), $0, &threadInfoCount)
-                    }
-                }
+        let total = user + system + idle + nice
 
-                if kr == KERN_SUCCESS && threadInfo.flags & TH_FLAGS_IDLE == 0 {
-                    totalUsage += Double(threadInfo.cpu_usage) / Double(TH_USAGE_SCALE) * 100.0
-                }
-            }
-            vm_deallocate(mach_task_self_, vm_address_t(bitPattern: threads), vm_size_t(Int(threadCount) * MemoryLayout<thread_t>.stride))
+        if previousTotal == 0 {
+            previousTotal = total
+            previousUser = user
+            previousSystem = system
+            previousIdle = idle
+            previousNice = nice
+            return 0.0
         }
 
-        return min(totalUsage, 100.0)
+        let deltaTotal = total - previousTotal
+        let deltaIdle = idle - previousIdle
+
+        previousTotal = total
+        previousUser = user
+        previousSystem = system
+        previousIdle = idle
+        previousNice = nice
+
+        if deltaTotal == 0 {
+            return 0.0
+        }
+
+        let usage = Double(deltaTotal - deltaIdle) / Double(deltaTotal) * 100.0
+        return min(max(usage, 0.0), 100.0)
     }
 }

@@ -18,14 +18,18 @@ class MemoryMonitor {
         }
 
         let pageSize = UInt64(vm_kernel_page_size)
-        let free = UInt64(vmStats.free_count) * pageSize
+
+        // 计算 Apple 风格的内存使用
+        // 已用内存 = 活跃 + 被钉住 + 压缩
         let active = UInt64(vmStats.active_count) * pageSize
-        let inactive = UInt64(vmStats.inactive_count) * pageSize
         let wired = UInt64(vmStats.wire_count) * pageSize
+        let compressed = UInt64(vmStats.compressor_page_count) * pageSize
+        let used = active + wired + compressed
 
-        let used = active + wired
-        let total = used + free + inactive
+        // 总内存从系统获取
+        let total = ProcessInfo.processInfo.physicalMemory
 
+        // 计算使用率
         let usage = total > 0 ? Double(used) / Double(total) * 100.0 : 0.0
 
         return (usage, used, total)

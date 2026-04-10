@@ -28,8 +28,8 @@ class RunnerLoader {
         let customRunners = loadCustomRunners()
         runners.append(contentsOf: customRunners)
 
-        // 按名称排序
-        runners.sort { $0.name < $1.name }
+        // 按中文名称排序
+        runners.sort { $0.displayName < $1.displayName }
 
         return runners
     }
