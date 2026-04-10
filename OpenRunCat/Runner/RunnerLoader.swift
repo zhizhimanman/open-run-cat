@@ -7,9 +7,10 @@ class RunnerLoader {
     func loadAllRunners() -> [Runner] {
         var runners: [Runner] = []
 
-        // 加载内置角色
-        let builtInRunners = loadBuiltInRunners()
-        runners.append(contentsOf: builtInRunners)
+        // 加载内置角色 - 从 Resources 目录加载
+        if let catRunner = loadBuiltinRunner(name: "Cat") {
+            runners.append(catRunner)
+        }
 
         // 加载自定义角色
         let customRunners = loadCustomRunners()
@@ -18,25 +19,27 @@ class RunnerLoader {
         return runners
     }
 
-    private func loadBuiltInRunners() -> [Runner] {
-        var runners: [Runner] = []
+    private func loadBuiltinRunner(name: String) -> Runner? {
+        guard let resourcePath = Bundle.main.resourcePath else { return nil }
+        let resourceURL = URL(fileURLWithPath: resourcePath)
 
-        guard let resourcePath = Bundle.main.resourcePath else { return runners }
-        let runnersPath = URL(fileURLWithPath: resourcePath).appendingPathComponent(Constants.builtInRunnersPath)
+        // 查找 frame_XX.png 文件
+        let framePattern = /^frame_\d+\.png$/
+        guard let files = try? FileManager.default.contentsOfDirectory(at: resourceURL, includingPropertiesForKeys: nil) else { return nil }
 
-        guard let enumerator = FileManager.default.enumerator(at: runnersPath, includingPropertiesForKeys: [.isDirectoryKey]) else { return runners }
+        let framePaths = files
+            .filter { $0.pathExtension == "png" }
+            .filter { (try? framePattern.wholeMatch(in: $0.lastPathComponent)) != nil }
+            .sorted { $0.lastPathComponent < $1.lastPathComponent }
 
-        for case let folderURL as URL in enumerator {
-            let resourceValues = try? folderURL.resourceValues(forKeys: [.isDirectoryKey])
-            guard let isDirectory = resourceValues?.isDirectory, isDirectory else { continue }
+        guard !framePaths.isEmpty else { return nil }
 
-            let runner = loadRunnerFromFolder(folderURL, isBuiltIn: true)
-            if let runner = runner {
-                runners.append(runner)
-            }
-        }
-
-        return runners
+        return Runner(
+            id: "builtin-\(name)",
+            name: name,
+            framePaths: framePaths,
+            isBuiltIn: true
+        )
     }
 
     private func loadCustomRunners() -> [Runner] {
