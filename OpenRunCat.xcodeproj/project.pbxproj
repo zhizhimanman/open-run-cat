@@ -100,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				1A1A1A1A1A1A1A1A00000011 /* OpenRunCatApp.swift */,
+				1A1A1A1A1A1A1A1A00000014 /* Constants.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -306,6 +307,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A1A1A1A1A1A1A1A00000001 /* OpenRunCatApp.swift in Sources */,
+				1A1A1A1A1A1A1A1A00000003 /* Constants.swift in Sources */,
+				1A1A1A1A1A1A1A1A00000004 /* MetricsData.swift in Sources */,
+				1A1A1A1A1A1A1A1A00000005 /* SpeedSource.swift in Sources */,
+				1A1A1A1A1A1A1A1A00000006 /* AppTheme.swift in Sources */,
+				1A1A1A1A1A1A1A1A00000007 /* FPSLimit.swift in Sources */,
+				1A1A1A1A1A1A1A1A00000008 /* Settings.swift in Sources */,
+				1A1A1A1A1A1A1A1A00000009 /* Runner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
