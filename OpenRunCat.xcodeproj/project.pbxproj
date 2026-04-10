@@ -27,6 +27,11 @@
 		1A1A1A1A1A1A1A1A00000026 /* RunnerLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A00000026 /* RunnerLoader.swift */; };
 		1A1A1A1A1A1A1A1A00000027 /* RunnerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A00000027 /* RunnerManager.swift */; };
 		1A1A1A1A1A1A1A1A00000028 /* FrameAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A1A00000028 /* FrameAnimator.swift */; };
+		/* Theme files */
+		1A1A1A1A1A1A1A00000029 /* IconTinting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A00000029 /* IconTinting.swift */; };
+		1A1A1A1A1A1A1A0000002A /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A0000002A /* ThemeManager.swift */; };
+		/* Utilities files */
+		1A1A1A1A1A1A1A0000002B /* NSImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1A1A1A0000002B /* NSImageExtensions.swift */; };
 		/* Test files */
 		2B2B2B2B2B2B2B2B00000001 /* SystemMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2B2B2B2B2B2B2B00000001 /* SystemMonitorTests.swift */; };
 		2B2B2B2B2B2B2B2B00000002 /* RunnerManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2B2B2B2B2B2B2B00000002 /* RunnerManagerTests.swift */; };
@@ -65,6 +70,11 @@
 		1A1A1A1A1A1A1A1A00000026 /* RunnerLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerLoader.swift; sourceTree = "<group>"; };
 		1A1A1A1A1A1A1A1A00000027 /* RunnerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerManager.swift; sourceTree = "<group>"; };
 		1A1A1A1A1A1A1A1A00000028 /* FrameAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameAnimator.swift; sourceTree = "<group>"; };
+			/* Theme files */
+			1A1A1A1A1A1A1A00000029 /* IconTinting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTinting.swift; sourceTree = "<group>"; };
+			1A1A1A1A1A1A1A0000002A /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+			/* Utilities files */
+			1A1A1A1A1A1A1A0000002B /* NSImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageExtensions.swift; sourceTree = "<group>"; };
 		2B2B2B2B2B2B2B2B00000010 /* OpenRunCatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenRunCatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		/* Test files */
 		2B2B2B2B2B2B2B2B00000001 /* SystemMonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMonitorTests.swift; sourceTree = "<group>"; };
@@ -118,6 +128,7 @@
 		1A1A1A1A1A1A1A1A00000032 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+
 				1A1A1A1A1A1A1A1A00000010 /* OpenRunCat.app */,
 				2B2B2B2B2B2B2B2B00000010 /* OpenRunCatTests.xctest */,
 			);
@@ -185,14 +196,17 @@
 		};
 		1A1A1A1A1A1A1A1A00000039 /* Theme */ = {
 			isa = PBXGroup;
-			children = (
+children = (
+				1A1A1A1A1A1A1A00000029 /* IconTinting.swift */,
+				1A1A1A1A1A1A1A0000002A /* ThemeManager.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
 		};
 		1A1A1A1A1A1A1A1A0000003A /* Utilities */ = {
 			isa = PBXGroup;
-			children = (
+children = (
+				1A1A1A1A1A1A1A0000002B /* NSImageExtensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -364,6 +378,11 @@
 				1A1A1A1A1A1A1A1A00000026 /* RunnerLoader.swift in Sources */,
 				1A1A1A1A1A1A1A1A00000027 /* RunnerManager.swift in Sources */,
 				1A1A1A1A1A1A1A1A00000028 /* FrameAnimator.swift in Sources */,
+				/* Theme files */
+				1A1A1A1A1A1A1A00000029 /* IconTinting.swift in Sources */,
+				1A1A1A1A1A1A1A0000002A /* ThemeManager.swift in Sources */,
+				/* Utilities files */
+				1A1A1A1A1A1A1A0000002B /* NSImageExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
