@@ -78,7 +78,7 @@ class RunnerLoader {
 
         let pngFiles = files
             .filter { $0.pathExtension == "png" }
-            .filter { $0.lastPathComponent.contains("frame") }
+            .filter { $0.lastPathComponent.hasPrefix("frame_") }
             .sorted { $0.lastPathComponent < $1.lastPathComponent }
 
         return pngFiles
