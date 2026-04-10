@@ -1,0 +1,41 @@
+name: Build macOS App
+
+on:
+  push:
+    branches: [ main, feature/* ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-14
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup Xcode
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: '15.2'
+
+    - name: Build
+      run: |
+        xcodebuild -scheme OpenRunCat \
+          -configuration Release \
+          -destination 'platform=macOS' \
+          -derivedDataPath build \
+          build
+
+    - name: Package App
+      run: |
+        mkdir -p artifacts
+        cp -r build/Build/Products/Release/OpenRunCat.app artifacts/
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: OpenRunCat-macOS
+        path: artifacts/OpenRunCat.app
+        retention-days: 30
