@@ -53,11 +53,6 @@ struct Runner: Identifiable {
             "CyberUFO-Classic": "经典飞碟",
             "CyberUFO-Pink": "粉色飞碟",
 
-            // Claude Code 小螃蟹
-            "ClaudeCrab-SideRun": "小螃蟹-奔跑",
-            "ClaudeCrab-ClawWave": "小螃蟹-挥爪",
-            "ClaudeCrab-BounceHop": "小螃蟹-跳跃",
-
             // 原始小猫
             "Cat": "小猫",
         ]
