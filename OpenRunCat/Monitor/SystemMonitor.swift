@@ -14,6 +14,10 @@ class SystemMonitor: ObservableObject {
 
     private var timer: Timer?
 
+    deinit {
+        stopMonitoring()
+    }
+
     func startMonitoring() {
         timer = Timer.scheduledTimer(withTimeInterval: Constants.monitorInterval, repeats: true) { [weak self] _ in
             self?.updateMetrics()
@@ -48,10 +52,6 @@ class SystemMonitor: ObservableObject {
     }
 
     func getSpeedForSource(_ source: SpeedSource) -> Double {
-        switch source {
-        case .cpu: return metrics.cpuUsage
-        case .memory: return metrics.memoryUsage
-        case .gpu: return metrics.gpuUsage ?? metrics.cpuUsage
-        }
+        return metrics.speedValue(for: source)
     }
 }

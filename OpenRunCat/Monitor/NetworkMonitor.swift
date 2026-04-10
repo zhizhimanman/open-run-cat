@@ -8,6 +8,8 @@ class NetworkMonitor {
     private var previousTimestamp: Date = Date()
 
     func getNetworkInfo() -> (upSpeed: UInt64, downSpeed: UInt64) {
+        // NOTE: Placeholder implementation - Network speeds are currently not measured accurately.
+        // TODO: Implement using sysctl or netstat to get actual network interface statistics.
         var upSpeed: UInt64 = 0
         var downSpeed: UInt64 = 0
 

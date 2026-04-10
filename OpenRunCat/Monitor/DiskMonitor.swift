@@ -20,6 +20,8 @@ class DiskMonitor {
         }
 
         // 获取读写速度
+        // NOTE: Placeholder implementation - Disk I/O speeds are currently not measured.
+        // TODO: Implement using IOKit to get actual disk read/write statistics.
         var readSpeed: UInt64 = 0
         var writeSpeed: UInt64 = 0
 
