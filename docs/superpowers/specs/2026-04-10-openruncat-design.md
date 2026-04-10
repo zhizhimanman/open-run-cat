@@ -129,8 +129,10 @@ struct MetricsData {
     var diskWriteSpeed: UInt64    // bytes/s
     var networkUpSpeed: UInt64    // bytes/s
     var networkDownSpeed: UInt64  // bytes/s
-    var gpuUsage: Double          // 0-100% (if available)
+    var gpuUsage: Double?         // 0-100% or nil (unavailable)
 }
+```
+注：GPU 监控在部分 Mac 上不可用（如老款机型），返回 nil 时菜单不显示 GPU 行。
 ```
 
 ### 3. RunnerManager
@@ -142,13 +144,16 @@ struct MetricsData {
 
 角色模型：
 ```swift
-struct Runner: Identifiable, Codable {
+struct Runner: Identifiable {
     let id: String              // 角色唯一标识
     let name: String            // 显示名称
     let frameCount: Int         // 帧数
-    let frames: [NSImage]       // 帧序列
+    let frames: [NSImage]       // 帧序列（内存加载）
+    let framePaths: [URL]       // 帧文件路径（用于持久化）
     let isBuiltIn: Bool         // 是否内置
 }
+```
+注：NSImage 不支持 Codable，持久化使用 framePaths，运行时加载到 frames。
 ```
 
 ### 4. SettingsManager
@@ -258,8 +263,9 @@ RunnerName/
 
 动画帧率 = baseSpeed + (usage × multiplier)
 
-- baseSpeed: 最低帧率（如 2 fps）
-- multiplier: 负载系数（如 0.5，100%负载时额外增加 50 fps）
+**默认值（可后续调整）：**
+- baseSpeed: 2 fps（最低帧率）
+- multiplier: 0.5（100%负载时额外增加 50 fps）
 
 示例：
 - CPU 0% → 2 fps（慢走）
@@ -277,7 +283,9 @@ RunnerName/
 
 ---
 
-## 文件清单
+## 文件清单（核心文件）
+
+以下为必须实现的核心文件，其他辅助文件在实现计划中详细列出。
 
 | 文件 | 职责 |
 |------|------|
