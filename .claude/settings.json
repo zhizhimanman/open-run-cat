@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:anthropic.com)",
+      "Read(//tmp/**)",
+      "Read(//private/tmp/**)",
+      "Bash(swift --version)",
+      "Read(//Applications/**)",
+      "Bash(ssh -T git@github.com)"
+    ],
+    "additionalDirectories": [
+      "/Users/dengzhixiang/code/open-run-cat/.worktrees/implementation/.github",
+      "/Users/dengzhixiang/.ssh"
+    ]
+  }
+}

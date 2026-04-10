@@ -23,7 +23,7 @@ class CPUMonitor {
 
                 let kr = withUnsafeMutablePointer(to: &threadInfo) {
                     $0.withMemoryRebound(to: integer_t.self, capacity: Int(threadInfoCount)) {
-                        thread_info(threads[i], THREAD_BASIC_INFO, $0, &threadInfoCount)
+                        thread_info(threads[i], thread_flavor_t(THREAD_BASIC_INFO), $0, &threadInfoCount)
                     }
                 }
 

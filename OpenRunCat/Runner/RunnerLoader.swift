@@ -27,7 +27,8 @@ class RunnerLoader {
         guard let enumerator = FileManager.default.enumerator(at: runnersPath, includingPropertiesForKeys: [.isDirectoryKey]) else { return runners }
 
         for case let folderURL as URL in enumerator {
-            guard let isDirectory = try? folderURL.resourceValue(forKey: .isDirectoryKey) as Bool, isDirectory else { continue }
+            let resourceValues = try? folderURL.resourceValues(forKeys: [.isDirectoryKey])
+            guard let isDirectory = resourceValues?.isDirectory, isDirectory else { continue }
 
             let runner = loadRunnerFromFolder(folderURL, isBuiltIn: true)
             if let runner = runner {
@@ -48,7 +49,8 @@ class RunnerLoader {
         guard let enumerator = FileManager.default.enumerator(at: customPath, includingPropertiesForKeys: [.isDirectoryKey]) else { return runners }
 
         for case let folderURL as URL in enumerator {
-            guard let isDirectory = try? folderURL.resourceValue(forKey: .isDirectoryKey) as Bool, isDirectory else { continue }
+            let resourceValues = try? folderURL.resourceValues(forKeys: [.isDirectoryKey])
+            guard let isDirectory = resourceValues?.isDirectory, isDirectory else { continue }
 
             let runner = loadRunnerFromFolder(folderURL, isBuiltIn: false)
             if let runner = runner {
@@ -81,7 +83,7 @@ class RunnerLoader {
 
         let pngFiles = files
             .filter { $0.pathExtension == "png" }
-            .filter { try? framePattern.wholeMatch(in: $0.lastPathComponent) != nil }
+            .filter { framePattern.wholeMatch(in: $0.lastPathComponent) != nil }
             .sorted { $0.lastPathComponent < $1.lastPathComponent }
 
         return pngFiles

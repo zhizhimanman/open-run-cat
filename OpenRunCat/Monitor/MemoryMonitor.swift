@@ -9,7 +9,7 @@ class MemoryMonitor {
 
         let result = withUnsafeMutablePointer(to: &vmStats) {
             $0.withMemoryRebound(to: integer_t.self, capacity: Int(count)) {
-                host_statistics64(mach_host_self_, HOST_VM_INFO64, $0, &count)
+                host_statistics64(mach_host_self(), HOST_VM_INFO64, $0, &count)
             }
         }
 

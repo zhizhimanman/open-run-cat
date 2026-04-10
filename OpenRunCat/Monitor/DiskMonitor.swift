@@ -12,7 +12,7 @@ class DiskMonitor {
         let homeURL = URL(fileURLWithPath: NSHomeDirectory())
         var usage: Double = 0.0
 
-        if let attributes = try? FileManager.default.attributesOfFileSystemForPath(homeURL.path),
+        if let attributes = try? FileManager.default.attributesOfFileSystem(forPath: homeURL.path),
            let totalSize = attributes[.systemSize] as? UInt64,
            let freeSize = attributes[.systemFreeSize] as? UInt64 {
             let usedSize = totalSize - freeSize

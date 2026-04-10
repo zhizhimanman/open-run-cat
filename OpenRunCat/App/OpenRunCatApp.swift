@@ -13,7 +13,7 @@ struct OpenRunCatApp: App {
 
     var body: some Scene {
         // Menu bar app does not need to show a window
-        Settings {
+        SwiftUI.Settings {
             EmptyView()
         }
     }

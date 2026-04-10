@@ -16,16 +16,15 @@ class IconTinting {
 
     private static func systemTint() -> NSColor {
         // Detect if system is currently in dark mode
-        if let appearance = NSApp.effectiveAppearance {
-            if appearance.name == .darkAqua {
-                return NSColor.white
-            }
+        let appearance = NSApp.effectiveAppearance
+        if appearance.name == .darkAqua {
+            return NSColor.white
         }
         return NSColor.black
     }
 
     static func tintedIcon(_ image: NSImage, forTheme theme: AppTheme) -> NSImage {
         let tint = tintForTheme(theme)
-        return image.tinted(with: tint)
+        return image.tinted(with: tint) ?? image
     }
 }

@@ -140,7 +140,7 @@ class ContextMenuBuilder {
     }
 }
 
-protocol ContextMenuDelegate: AnyObject {
+@objc protocol ContextMenuDelegate: AnyObject {
     func selectRunner(_ sender: NSMenuItem)
     func selectSpeedSource(_ sender: NSMenuItem)
     func selectTheme(_ sender: NSMenuItem)
