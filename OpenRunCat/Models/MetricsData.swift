@@ -14,8 +14,11 @@ struct MetricsData {
     var networkDownSpeed: UInt64 = 0
     var gpuUsage: Double? = nil
 
-    var speedValue: Double {
-        // 根据当前选定的 SpeedSource 返回对应值
-        return cpuUsage // 默认使用 CPU
+    func speedValue(for source: SpeedSource) -> Double {
+        switch source {
+        case .cpu: return cpuUsage
+        case .memory: return memoryUsage
+        case .gpu: return gpuUsage ?? cpuUsage
+        }
     }
 }
