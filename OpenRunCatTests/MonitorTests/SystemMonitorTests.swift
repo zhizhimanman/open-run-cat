@@ -44,19 +44,10 @@ class SystemMonitorTests: XCTestCase {
         XCTAssertEqual(speed, 75.0)
     }
 
-    func testSpeedSourceGPUFallback() {
-        monitor.metrics.cpuUsage = 30.0
-        monitor.metrics.gpuUsage = nil
-        let speed = monitor.getSpeedForSource(.gpu)
-        // GPU is nil, should fallback to CPU
-        XCTAssertEqual(speed, 30.0)
-    }
-
-    func testSpeedSourceGPUWithValue() {
-        monitor.metrics.cpuUsage = 30.0
-        monitor.metrics.gpuUsage = 60.0
-        let speed = monitor.getSpeedForSource(.gpu)
-        XCTAssertEqual(speed, 60.0)
+    func testSpeedSourceDiskIO() {
+        monitor.metrics.diskUsage = 40.0
+        let speed = monitor.getSpeedForSource(.diskIO)
+        XCTAssertEqual(speed, 40.0)
     }
 
     func testDiskMonitorReturnsValidRange() {

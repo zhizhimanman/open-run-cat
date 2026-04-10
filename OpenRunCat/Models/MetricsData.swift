@@ -18,7 +18,10 @@ struct MetricsData {
         switch source {
         case .cpu: return cpuUsage
         case .memory: return memoryUsage
-        case .gpu: return gpuUsage ?? cpuUsage
+        case .diskIO: return diskUsage
+        case .networkIO:
+            let totalNetworkSpeed = Double(networkUpSpeed + networkDownSpeed)
+            return min(totalNetworkSpeed / 1_000_000.0, 100.0) // Normalize to percentage
         }
     }
 }

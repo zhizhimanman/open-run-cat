@@ -1,0 +1,36 @@
+/*
+  Localizable.strings (English)
+  OpenRunCat
+*/
+
+// Menu Items
+"CPU" = "CPU";
+"Memory" = "Memory";
+"Disk" = "Disk";
+"Network" = "Network";
+"GPU" = "GPU";
+"Runner" = "Runner";
+"Speed Source" = "Speed Source";
+"Theme" = "Theme";
+"FPS Limit" = "FPS Limit";
+"Launch at Login" = "Launch at Login";
+"Quit OpenRunCat" = "Quit OpenRunCat";
+
+// Themes
+"Light" = "Light";
+"Dark" = "Dark";
+"System" = "System";
+
+// Speed Sources
+"CPU Usage" = "CPU Usage";
+"Memory Usage" = "Memory Usage";
+"Disk I/O" = "Disk I/O";
+"Network I/O" = "Network I/O";
+
+// FPS Limits
+"None" = "None";
+"5 FPS" = "5 FPS";
+"10 FPS" = "10 FPS";
+"15 FPS" = "15 FPS";
+"30 FPS" = "30 FPS";
+"60 FPS" = "60 FPS";

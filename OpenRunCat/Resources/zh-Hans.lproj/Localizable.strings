@@ -1,0 +1,36 @@
+/*
+  Localizable.strings (Chinese Simplified)
+  OpenRunCat
+*/
+
+// 菜单项
+"CPU" = "CPU";
+"Memory" = "内存";
+"Disk" = "磁盘";
+"Network" = "网络";
+"GPU" = "GPU";
+"Runner" = "跑者";
+"Speed Source" = "速度来源";
+"Theme" = "主题";
+"FPS Limit" = "帧率限制";
+"Launch at Login" = "开机启动";
+"Quit OpenRunCat" = "退出 OpenRunCat";
+
+// 主题
+"Light" = "浅色";
+"Dark" = "深色";
+"System" = "跟随系统";
+
+// 速度来源
+"CPU Usage" = "CPU 使用率";
+"Memory Usage" = "内存使用率";
+"Disk I/O" = "磁盘读写";
+"Network I/O" = "网络传输";
+
+// FPS 限制
+"None" = "无限制";
+"5 FPS" = "5 帧/秒";
+"10 FPS" = "10 帧/秒";
+"15 FPS" = "15 帧/秒";
+"30 FPS" = "30 帧/秒";
+"60 FPS" = "60 帧/秒";
